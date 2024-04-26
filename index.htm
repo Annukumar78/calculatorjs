@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Age Calculator</title>
+</head>
+
+<body class="bg">
+    <div class="div">
+        <p class="age">Age Calculator</p>
+        <div class="input">
+            <form id="myForm">
+                <!-- Custom Alert Box -->
+                <div id="customAlert" class="custom-alert">
+                    <div class="custom-alert-content">
+                        <span id="customAlertMessage" class="custom-alert-message"></span>
+                       <!-- <button id="customAlertCloseBtn" class="custom-alert-close-btn" onclick="closeCustomAlert()">X</button> -->
+                    </div>
+                </div>
+                <br>
+                <label class="form">Date of Birth</label>
+                <div class="row" id="dob">
+                    <div class="col">
+                        <input 
+                        type="number"
+                        name="day"
+                        id="day" 
+                        placeholder="DD" 
+                        class="form-control"
+                        min="1"
+                        max="31"
+                        required />
+                    </div>
+                    <div class="col">
+                        <input
+                         type="number"
+                        placeholder="MM" 
+                        name="month"
+                        id="month"
+                        class="form-control" 
+                        min="1"
+                        max="12"
+                        required/>
+                    </div>
+                    <div class="col">
+                        <input
+                         type="number"
+                         placeholder="YYYY" 
+                         name="year"
+                         id="year"
+                         class="form-control"
+                         minlength="4"
+                         maxlength="4"
+                        required/>
+                    </div>
+                </div>
+                <label class="form">Current Date</label>
+                <div class="row" id="dob">
+                    <div class="col">
+                        <input 
+                        type="number"
+                        name="dob-d"
+                        id="dob-d" 
+                        placeholder="DD" 
+                        value="${new Date().getDate()}"
+                        class="form-control"
+                        min="1"
+                        max="31"
+                        required />
+                    </div>
+                    <div class="col">
+                        <input
+                         type="number"
+                        placeholder="MM" 
+                        name="dob-m"
+                        id="dob-m"
+                        value="${new Date().getMonth() + 1}"
+                        class="form-control" 
+                        min="1"
+                        max="12"
+                        required/>
+                    </div>
+                    <div class="col">
+                        <input
+                         type="number"
+                         placeholder="YYYY" 
+                         name="dob-y"
+                         id="dob-y"
+                         value="${new Date().getFullYear()}"
+                         class="form-control"
+                         minlength="4"
+                         maxlength="4"
+                        required/>
+                    </div>
+                </div>
+                
+                <div class="btn">
+                    <button class="col1" type="button" onclick="clearForm()">Clear</button>
+                    <button class="col2" type="button" onclick="showDate()">Calculate</button>
+                </div>
+                
+            </form>
+
+        </div>
+         
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+
